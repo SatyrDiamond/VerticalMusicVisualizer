@@ -7,7 +7,7 @@ convert -brightness-contrast -50x-20 -blur 0x15 artcropped.bmp artfinal.bmp
 
 rm final.avi
 
-ffmpeg -i 'Vitas - Зима.flac' -i song.png -i artfinal.bmp -filter_complex " \
+ffmpeg -i 'test.flac' -i song.png -i artfinal.bmp -filter_complex " \
 [0:a] showwaves=s=1080x1920:mode=cline:s=1080x1920:colors=#303030@1:scale=sqrt:r=30,format=rgba [waveform]; \
 [1:v] format=rgba [textimage]; \
 [2:v] format=rgba [coverimage]; \
